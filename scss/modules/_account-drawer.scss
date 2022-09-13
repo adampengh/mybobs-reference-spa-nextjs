@@ -1,0 +1,31 @@
+.account-drawer {
+  &__top {
+    background-color: #F4F5F4;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem 2rem;
+  }
+
+  &__links {
+    padding: 2rem 2rem 0;
+  }
+
+
+  &__link {
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    &-text {
+      padding-left: 1rem;
+    }
+    p {
+      margin: 0;
+    }
+    .description {
+      font-size: 12px;
+    }
+  }
+}

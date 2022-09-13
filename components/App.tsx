@@ -24,6 +24,7 @@ import { useMemo, useState } from 'react';
 import { CommerceApiClientFactory, CommerceConnectorProvider } from '@bloomreach/connector-components-react';
 import { Cookies, CookiesProvider } from 'react-cookie';
 import {
+  BobsAccountDrawer,
   BobsFindTheRightFeelComponent,
   BobsHero,
   BobsImageRightBanner,
@@ -82,6 +83,7 @@ export function App({
 }: AppProps): JSX.Element {
   const [, setCookieConsentVal] = useState<boolean>();
   const mapping = {
+    BobsAccountDrawer,
     BobsFindTheRightFeelComponent,
     BobsMattressFeatures,
     BobsHero,

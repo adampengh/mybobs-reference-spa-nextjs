@@ -56,9 +56,7 @@ Index.getInitialProps = async ({ req: request, res: response, asPath: path, quer
   // console.log('[getServerSideProps]: query=', query);
 
   const configuration = buildConfiguration(path ?? '/', query);
-  console.log('configuration', configuration);
   const page = await initialize({ ...configuration, request, httpClient: axios as any });
-  console.log('page', page);
   const pageJson = page.toJSON();
   const commerceConfig = loadCommerceConfig(pageJson, query);
   const props: IndexPageProps = { configuration, commerceConfig, page: pageJson };

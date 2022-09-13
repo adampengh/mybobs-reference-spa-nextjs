@@ -84,8 +84,19 @@
       margin-left: auto;
     }
     &-icons {
-      flex: 1 1;
+      flex-grow: 0;
+      flex-shrink: 1;
       margin-left: auto;
+      display: flex;
+      justify-content: flex-end;
+      button {
+        background: none;
+        border: none;
+        color: #ff0000;
+      }
+      img {
+        max-width: 32px;
+      }
     }
   }
 

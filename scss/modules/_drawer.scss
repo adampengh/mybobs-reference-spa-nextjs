@@ -1,0 +1,52 @@
+.drawer {
+  &__inner {
+    background: #fff;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+    width: 400px;
+    z-index: 2;
+    &[data-show-drawer="true"] {
+      box-shadow: -2px -2px 8px rgba(0, 0, 0, 0.5);
+      transform: translateX(0%);
+    }
+  }
+
+  &__close {
+    align-items: center;
+    background: none;
+    border: none;
+    display: flex;
+    font-size: 24px;
+    height: 32px;
+    justify-content: center;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    transition: all 0.3s ease;
+    width: 32px;
+    &:hover {
+      background: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__overlay {
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: all 0.5s ease;
+    width: 100vw;
+    z-index: 1;
+    &[data-show-drawer="true"] {
+      display: block;
+    }
+  }
+}

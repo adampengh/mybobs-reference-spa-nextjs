@@ -39,6 +39,7 @@ export * from './TitleAndText';
 export * from './Video';
 
 // CUSTOM
+export * from './BobsAccountDrawer';
 export * from './BobsFindTheRightFeelComponent';
 export * from './BobsHero';
 export * from './BobsImageRightBanner';

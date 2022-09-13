@@ -1,9 +1,24 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { BrComponent } from '@bloomreach/react-sdk';
 import { Navigation } from '../Navigation';
 
 const Header = (): React.ReactElement => {
+  const [showDrawer, setShowDrawer] = useState(false);
+
+  const [, updateState] = useState({});
+  const forceUpdate = React.useCallback(() => updateState({}), []);
+
+  const handleShow = () => {
+    setShowDrawer(true);
+    forceUpdate();
+  };
+
+  const handleHide = () => {
+    setShowDrawer(false);
+    forceUpdate();
+  };
+
   return (
     <header className='header'>
       <section className='header__top'>
@@ -33,21 +48,33 @@ const Header = (): React.ReactElement => {
       <section className='header__primary'>
         <div className='header__primary-inner'>
           <div className='header__primary-logo'>
-            <Image
-              src='/_ui/desktop/common/bobs/images/logo.svg'
-              alt='logo'
-              width={207}
-              height={25}
-            />
+            <a href='/'>
+              <Image
+                src='/_ui/desktop/common/bobs/images/logo.svg'
+                alt='logo'
+                width={207}
+                height={25}
+              />
+            </a>
           </div>
           <div className='header__primary-search'>
-            <BrComponent path="search" />
-            {/* <input type='search' placeholder='What can we help you find?'/> */}
+            {/* <BrComponent path="search" /> */}
+            <input type='search' placeholder='What can we help you find?'/>
           </div>
           <div className='header__primary-store'>
             Stores
           </div>
-          <div className='header__primary-icons'>Icons</div>
+          <div className='header__primary-icons'>
+            <button onClick={() => handleShow()}>
+              <img src='/_ui/desktop/common/bobs/images/icons/user.jpg' alt='user' />
+            </button>
+            <button>
+              <img src='/_ui/desktop/common/bobs/images/icons/wishlist.jpg' alt='wishlist' />
+            </button>
+            <button>
+              <img src='/_ui/desktop/common/bobs/images/icons/cart.jpg' alt='cart' />
+            </button>
+          </div>
         </div>
       </section>
       <section className='header__nav'>
@@ -57,6 +84,24 @@ const Header = (): React.ReactElement => {
           </BrComponent>
         </div>
       </section>
+      <BrComponent path="account-drawer">
+        <section
+          className='drawer'
+          data-show-drawer={showDrawer}
+        >
+          <div
+            className='drawer__inner'
+            data-show-drawer={showDrawer}
+          >
+            <button className='drawer__close' onClick={() => handleHide()}>&times;</button>
+            <BrComponent />
+          </div>
+          <div
+            className='drawer__overlay'
+            data-show-drawer={showDrawer}
+            onClick={() => handleHide()} />
+        </section>
+      </BrComponent>
     </header>
   );
 };
