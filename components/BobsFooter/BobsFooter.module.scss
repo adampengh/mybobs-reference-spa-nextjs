@@ -1,0 +1,28 @@
+.ty {
+  width: 200px;
+  margin: 0 0 2.5rem 0;
+  @media (min-width: 375px) and (max-width: 413px) {
+    width: 200px;
+    margin: 0 0 2.5rem 0;
+  }
+
+  @media (min-width: 414px) and (max-width: 767px) {
+    width: 200px;
+    margin: 0 0 2.5rem 0;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 156px;
+    margin: 8.2rem 0 0 0;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    width: 156px;
+    margin: 2.4rem 0 0 0;
+  }
+
+  @media (min-width: 1281px) {
+    width: 176px;
+    margin: 2.4rem 0 0 0;
+  }
+}

@@ -1,0 +1,105 @@
+// ================================================
+// Header
+// ================================================
+.header {
+
+  // ------------------------------------------------
+  // Top
+  // ------------------------------------------------
+  &__top {
+    background: #F7F7F7;
+    padding: 0.6875rem 0;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+
+    &-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    &-left {
+      a {
+        color: #333;
+        text-decoration: underline;
+      }
+    }
+    &-right {
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        li {
+
+        }
+        a {
+          font-size: 12px;
+          color: #333;
+          padding-left: 1.5rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  // ------------------------------------------------
+  // Primary
+  // ------------------------------------------------
+  &__primary {
+    border-bottom: 1px solid #ccc;
+    &-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      height: 70px;
+      display: flex;
+      align-items: center;
+    }
+
+    &-logo {
+      margin-right: 6rem;
+    }
+    &-search {
+      margin-right: 6rem;
+      flex: 1 1;
+      input {
+        width: 400px;
+        border: 1px solid #ccc;
+        height: 36px;
+        padding-left: 8px;
+        border-radius: 2px;
+        &::placeholder {
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+    }
+    &-store {
+      flex: 1 1;
+      margin-left: auto;
+    }
+    &-icons {
+      flex: 1 1;
+      margin-left: auto;
+    }
+  }
+
+
+  // ------------------------------------------------
+  // Navigation
+  // ------------------------------------------------
+  &__nav {
+    position: relative;
+    border-bottom: 1px solid #d8d8d8;
+    &-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+  }
+}
+

@@ -1,0 +1,35 @@
+.image-right-banner {
+  display: block;
+  max-width: 1440px;
+  margin: 3rem auto;
+  position: relative;
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  &__left {
+    width: 30%;
+    flex-basis: 30%;
+    padding-right: 2rem;
+    & > div {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__right {
+    width: 70%;
+    flex-basis: 70%;
+  }
+  h4 {
+    font-size: 32px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0;
+    margin-left: 0.5rem;
+  }
+  p {
+    margin-top: 0.5rem;
+  }
+}

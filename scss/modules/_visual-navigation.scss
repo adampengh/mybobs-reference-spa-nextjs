@@ -1,0 +1,36 @@
+.visual-navigation {
+  display: block;
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  &__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  &__card {
+    margin-right: 1rem;
+    // text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  &__img {
+    margin-bottom: 0.5rem;
+  }
+  &__text {
+    text-align: center;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.has-visual-navigation {
+  background-color: #EDF1F5;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,129 @@
+.find-the-right-feel {
+  background-color: #F6F9F9;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  &__inner {
+    margin: 0 auto;
+    max-width: 1060px;
+  }
+  &__top {
+    display: block;
+    text-align: center;
+    p {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+  }
+
+
+
+  .tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+    // Button
+    .tab {
+      align-items: center;
+      background-color: #fff;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      display: flex;
+      flex-basis: 12.5%;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem 1rem 0.5rem;
+      &-active {
+        border: 2px solid #28828A;
+      }
+
+      p {
+        margin: 0;
+        margin-top: 4px;
+      }
+    }
+
+
+    &-content {
+      background: #fff;
+      margin-top: 2rem;
+      padding: 2rem 3rem;
+    }
+
+    &-panel {
+      display: none;
+      &-active {
+        display: block;
+      }
+
+      h4 {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+
+  .scale {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    &-item {
+      align-items: center;
+      background-color: #fff;
+      border-radius: 50%;
+      color: #333;
+      display: flex;
+      flex-basis: 36px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      font-size: 18px;
+      font-weight: bold;
+      height: 36px;
+      justify-content: center;
+      position: relative;
+      width: 36px;
+      margin: 0;
+      &.active {
+        background-color: #28828A;
+        color: #fff;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &-separator {
+      background-color: #ccc;
+      display: block;
+      height: 2px;
+      width: 100%;
+    }
+  }
+
+  .section-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 2rem;
+    &__left {
+      width: 40%;
+      padding-right: 1rem;
+    }
+
+    img {
+      max-width: 100%;
+      width: 60%;
+    }
+
+    h4 {
+      text-align: left;
+    }
+  }
+}

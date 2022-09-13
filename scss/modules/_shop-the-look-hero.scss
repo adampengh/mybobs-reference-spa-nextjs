@@ -1,0 +1,104 @@
+.shop-the-look {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+
+
+  &__button {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    background-color: #fff;
+    border: none;
+    padding: 1rem 3rem;
+    color: #333;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+
+  &__overlay {
+    position: absolute;
+    bottom: 6rem;
+    left: 2rem;
+    width: 400px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 20%;
+      transform: translate(50%, 100%);
+      z-index: 9999;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 6px solid #fff;
+    }
+    &.show {
+      height: 500px;
+      overflow: visible;
+      // visibility: visible;
+    }
+    &.hide {
+      height: 0;
+      overflow: hidden;
+      // visibility: hidden;
+    }
+  }
+
+  &__products {
+    height: 90%;
+    margin: 1rem 1rem 0;
+    overflow: scroll;
+  }
+  &__product {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: #333;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ccc;
+    &:first-child {
+      padding-top: 0;
+    }
+    &:hover {
+      cursor: pointer;
+      color: #333;
+    }
+    &-img {
+      width: 40%;
+    }
+    &-text {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 1rem;
+      p {
+        margin: 0;
+      }
+    }
+    &-price {
+      font-weight: bold;
+    }
+  }
+
+
+  &__link {
+    margin-top: auto;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      color: #333;
+      text-decoration: underline;
+    }
+  }
+}

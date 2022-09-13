@@ -1,0 +1,66 @@
+.three-quarter-hero {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  flex-direction: row;
+  &.right {
+    flex-direction: row-reverse;
+  }
+  &__img {
+    width: 75%;
+    position: relative;
+  }
+
+  &__inlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    &.topLeft {
+      top: 1rem;
+      left: 1rem;
+    }
+    &.topRight {
+      top: 1rem;
+      right: 1rem;
+    }
+    &.bottomLeft {
+      bottom: 1rem;
+      left: 1rem;
+    }
+    &.bottomRight {
+      bottom: 1rem;
+      right: 1rem;
+    }
+
+    // is-round
+    &.is-round {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+    }
+    &.has-border {
+      border-width: 1px;
+      border-style: solid;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .btn {
+      display: inline-block;
+    }
+  }
+
+  &__text {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem;
+  }
+}
