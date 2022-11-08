@@ -46,6 +46,7 @@ export * from './BobsImageRightBanner';
 export * from './BobsMattressFeatures';
 export * from './ProductListing';
 export * from './BobsPromoBanner';
+export * from './BobsShopByStyle';
 export * from './BobsShopTheLookBanner';
 export * from './BobsThreeColumnImageCta';
 export * from './BobsThreeQuarterHeroComponent';

@@ -39,7 +39,9 @@ export function Product({ component, page }: BrProps<ContainerItem>): React.Reac
   const specificationsBundle = specificationsRef && page.getContent<Document>(specificationsRef);
 
   const { query } = useRouter();
-  const pid = (query.route && query.route[0] === 'products' && query.route[1]) || '';
+  console.log('query', query);
+  const pid = (query.route && query.route[0] === 'product' && query.route[1]) || '';
+  console.log('pid', pid);
 
   const [cookies] = useCookies(['_br_uid_2']);
 

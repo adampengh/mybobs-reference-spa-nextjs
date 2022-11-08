@@ -1,5 +1,5 @@
 import { BrProps } from '@bloomreach/react-sdk';
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 
 const BobsFindTheRightFeelComponent = ({ component, page }: BrProps): React.ReactElement | null => {
   const [activeTab, setActiveTab] = useState(4);
@@ -49,12 +49,12 @@ const BobsFindTheRightFeelComponent = ({ component, page }: BrProps): React.Reac
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, i) => {
                       const scaleValues = section?.firmScaleValue?.split(',');
                       return (
-                        <>
+                        <Fragment key={i}>
                           <p
                             className={`scale-item ${scaleValues.includes(item.toString()) ? 'active' : ''}`}
                           >{ item }</p>
                           { item !== 10 && <span className='scale-separator' /> }
-                        </>
+                        </Fragment>
                       );
                     })}
                   </div>

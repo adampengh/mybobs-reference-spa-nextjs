@@ -49,12 +49,10 @@ export function loadCommerceConfig(page: PageModel, query?: ParsedUrlQuery): Com
     discoveryCustomVarAttrFields: process.env.NEXT_PUBLIC_DISCOVERY_CUSTOM_VARIANT_ATTR_FIELDS?.split(','),
     discoveryCustomVarListPriceField: process.env.NEXT_PUBLIC_DISCOVERY_CUSTOM_VARIANT_LIST_PRICE_FIELD,
     discoveryCustomVarPurchasePriceField: process.env.NEXT_PUBLIC_DISCOVERY_CUSTOM_VARIANT_PURCHASE_PRICE_FIELD,
-    brEnvType: channelParams?.discoveryRealm === 'PRODUCTION'
-      ? undefined
-      : channelParams?.discoveryRealm || process.env.NEXT_PUBLIC_BR_ENV_TYPE,
+    brEnvType: process.env.NEXT_PUBLIC_BR_ENV_TYPE,
     brAccountName: getBrAccountName(page, query),
   };
-
+  console.log('commerceConfig', commerceConfig)
   return commerceConfig;
 }
 
