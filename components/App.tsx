@@ -116,6 +116,7 @@ export function App({
     SearchBar,
     TitleAndText,
     Video,
+    SpartacusBreadcrumb: null,
   };
 
   const updateCookieConsentVal = (val: boolean): void => {

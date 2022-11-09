@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import React, { useContext, useEffect, useMemo } from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { Alert, Col, Image, Row, Table } from 'react-bootstrap';
 import { useCookies } from 'react-cookie';
 import { ContainerItem, Document, Reference } from '@bloomreach/spa-sdk';
@@ -27,6 +27,7 @@ import styles from './Product.module.scss';
 import { CommerceContext } from '../CommerceContext';
 import { isLoading, notEmpty } from '../../src/utils';
 import { ProductNotFoundError } from './ProductNotFoundError';
+import ProductComparison from './ProductComparison';
 
 interface ProductModels {
   specifications?: Reference;
@@ -39,9 +40,7 @@ export function Product({ component, page }: BrProps<ContainerItem>): React.Reac
   const specificationsBundle = specificationsRef && page.getContent<Document>(specificationsRef);
 
   const { query } = useRouter();
-  console.log('query', query);
   const pid = (query.route && query.route[0] === 'product' && query.route[1]) || '';
-  console.log('pid', pid);
 
   const [cookies] = useCookies(['_br_uid_2']);
 
@@ -159,6 +158,10 @@ export function Product({ component, page }: BrProps<ContainerItem>): React.Reac
     return null;
   }
 
+  const pidSkuArray = pid.split('___');
+  const [, sku] = pidSkuArray;
+  const selectedVariant = item?.variants?.find((a) => a?.itemId.code === sku);
+
   return (
     <div className="mw-container mx-auto">
       <Row>
@@ -219,6 +222,15 @@ export function Product({ component, page }: BrProps<ContainerItem>): React.Reac
               </Table>
             </>
           )}
+        </Col>
+      </Row>
+
+      <Row>
+        <Col>
+            <ProductComparison
+              item={item}
+              selectedVariant={selectedVariant}
+            />
         </Col>
       </Row>
     </div>
