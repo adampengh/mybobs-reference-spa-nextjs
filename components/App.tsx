@@ -25,10 +25,13 @@ import { CommerceApiClientFactory, CommerceConnectorProvider } from '@bloomreach
 import { Cookies, CookiesProvider } from 'react-cookie';
 import {
   BobsAccountDrawer,
+  BobsBlog,
   BobsFindTheRightFeelComponent,
   BobsHero,
   BobsImageRightBanner,
   BobsMattressFeatures,
+  BobsProductGalleryOne,
+  BobsProductGalleryTwo,
   BobsPromoBanner,
   BobsShopByStyle,
   BobsShopTheLookBanner,
@@ -85,10 +88,13 @@ export function App({
   const [, setCookieConsentVal] = useState<boolean>();
   const mapping = {
     BobsAccountDrawer,
+    bobsBlog: BobsBlog,
     BobsFindTheRightFeelComponent,
     BobsMattressFeatures,
     BobsHero,
     BobsImageRightBanner,
+    bobsProductGalleryOne: BobsProductGalleryOne,
+    bobsProductGalleryTwo: BobsProductGalleryTwo,
     BobsPromoBanner,
     bobsShopByStyle: BobsShopByStyle,
     BobsShopTheLookBanner,

@@ -40,11 +40,14 @@ export * from './Video';
 
 // CUSTOM
 export * from './BobsAccountDrawer';
+export * from './BobsBlog';
 export * from './BobsFindTheRightFeelComponent';
 export * from './BobsHero';
 export * from './BobsImageRightBanner';
 export * from './BobsMattressFeatures';
 export * from './ProductListing';
+export * from './BobsProductGalleryOne';
+export * from './BobsProductGalleryTwo';
 export * from './BobsPromoBanner';
 export * from './BobsShopByStyle';
 export * from './BobsShopTheLookBanner';
