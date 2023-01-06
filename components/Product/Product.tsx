@@ -36,6 +36,7 @@ interface ProductModels {
 type Attribute = Record<string, string>;
 
 export function Product({ component, page }: BrProps<ContainerItem>): React.ReactElement | null {
+  console.log('PRODUCT');
   const { specifications: specificationsRef } = component.getModels<ProductModels>();
   const specificationsBundle = specificationsRef && page.getContent<Document>(specificationsRef);
 

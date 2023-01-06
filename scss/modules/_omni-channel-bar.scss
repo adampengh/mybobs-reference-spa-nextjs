@@ -1,0 +1,16 @@
+.omni-channel-bar {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  text-align: center;
+
+  &__content {
+    margin: 0;
+    padding: 1rem 0;
+    p {
+      margin: 0;
+    }
+
+  }
+}

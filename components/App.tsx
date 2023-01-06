@@ -27,6 +27,7 @@ import {
   BobsAccountDrawer,
   BobsBlog,
   BobsFindTheRightFeelComponent,
+  BobsGuestOmniChannelBar,
   BobsHero,
   BobsImageRightBanner,
   BobsMattressFeatures,
@@ -90,6 +91,7 @@ export function App({
     BobsAccountDrawer,
     bobsBlog: BobsBlog,
     BobsFindTheRightFeelComponent,
+    bobsGuestOmniChannelBar: BobsGuestOmniChannelBar,
     BobsMattressFeatures,
     BobsHero,
     BobsImageRightBanner,
@@ -122,7 +124,7 @@ export function App({
     SearchBar,
     TitleAndText,
     Video,
-    SpartacusBreadcrumb: null,
+    // SpartacusBreadcrumb: null,
   };
 
   const updateCookieConsentVal = (val: boolean): void => {
@@ -170,6 +172,8 @@ export function App({
                 <BrComponent path="header">
                   <Header />
                 </BrComponent>
+
+                <BrComponent path="omni-channel-bar" />
 
                 <BrComponent path="top">
                   <Container as="section" fluid>

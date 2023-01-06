@@ -65,7 +65,7 @@ export default class MyApp extends App {
             crossOrigin="anonymous"
           />
         </Head>
-        <div className="d-flex flex-column vh-100">
+        <div className="d-flex flex-column">
           <Component {...pageProps} />
         </div>
       </>

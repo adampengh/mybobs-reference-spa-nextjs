@@ -60,7 +60,7 @@ export function BrRichTextContent(props: BrRichTextContentProps): React.ReactEle
   return (
     <Component
       className={className}
-      dangerouslySetInnerHTML={{ __html: page.rewriteLinks(page.sanitize(content.html)) }}
+      dangerouslySetInnerHTML={{ __html: page.rewriteLinks(content.html) }}
     />
   );
 }

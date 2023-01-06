@@ -42,6 +42,7 @@ export * from './Video';
 export * from './BobsAccountDrawer';
 export * from './BobsBlog';
 export * from './BobsFindTheRightFeelComponent';
+export * from './BobsGuestOmniChannelBar';
 export * from './BobsHero';
 export * from './BobsImageRightBanner';
 export * from './BobsMattressFeatures';
